@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Asset/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar left-sidebar">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Organize tasks by priority</li>
+                <li>Set due dates</li>
+                <li>Search tasks easily</li>
+                <li>Edit or remove tasks</li>
+                <li>Toggle dark/light mode</li>
+                <li>Clear completed tasks</li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>To-Do List</h1>
+            <h2>Your Tasks</h2>
+            <div class="input-container">
+                <input type="text" id="task-input" placeholder="Add a new task...">
+                <select id="priority-select">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="date" id="due-date-input">
+                <input type="time" id="due-time-input"> <!-- New due time input -->
+                <button id="add-task-btn"><i class="fas fa-plus"></i> Add Task</button>
+                <input type="text" id="search-input" placeholder="Search tasks...">
+                <button id="sort-tasks-btn">Sort Tasks</button>
+            </div>
+
+            <div id="task-count">Total Tasks: 0, Completed: 0</div>
+            <ul id="task-list"></ul>
+            <button id="clear-completed-btn">Clear Completed Tasks</button>
+            <button id="toggle-theme-btn">Toggle Dark/Light Mode</button>
+        </div>
+
+        <div class="sidebar right-sidebar">
+            <h2>Statistics Dashboard</h2>
+            <ul>
+                <li id="completed-count">Completed Tasks: 0</li>
+                <li id="overdue-count">Overdue Tasks: 0</li>
+                <li id="average-time">Average Time Taken: 0 minutes</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="fungtion.js"></script>
+</body>
+</html>
